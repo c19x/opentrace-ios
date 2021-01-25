@@ -17,6 +17,7 @@ extension EncounterRecord {
             let entity = NSEntityDescription.entity(forEntityName: "Encounter", in: managedContext)!
             let encounter = Encounter(entity: entity, insertInto: managedContext)
             encounter.set(encounterStruct: self)
+            FairEfficacyInstrumentation.shared.instrument(encounter: self)
             do {
                 try managedContext.save()
             } catch {

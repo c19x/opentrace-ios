@@ -93,6 +93,10 @@ class EncounterMessageManager {
     }
 
     func fetchTempIdFromFirebase(onComplete: ((Error?, (String, Date)?) -> Void)?) {
+        if FairEfficacyInstrumentation.testMode {
+            onComplete?(nil, (FairEfficacyInstrumentation.shared.payloadData.base64EncodedString(), Date.distantFuture))
+            return
+        }
         Logger.DLog("Fetching tempId from firebase")
         functions.httpsCallable("getBroadcastMessage").call { (result, error) in
             // Handle error
@@ -126,6 +130,15 @@ class EncounterMessageManager {
     }
 
     func fetchBatchTempIdsFromFirebase(onComplete: ((Error?, ([[String: Any]], Date)?) -> Void)?) {
+        if FairEfficacyInstrumentation.testMode {
+            var tempIds: [[String: Any]] = []
+            var tempId: [String: Any] = [:]
+            tempId["expiryTime"] = Date.distantFuture
+            tempId["tempID"] = FairEfficacyInstrumentation.shared.payloadData.base64EncodedString()
+            tempIds.append(tempId)
+            onComplete?(nil, (tempIds, Date.distantFuture))
+            return
+        }
         Logger.DLog("Fetching Batch of tempIds from firebase")
         functions.httpsCallable("getTempIDs").call { (result, error) in
             // Handle error

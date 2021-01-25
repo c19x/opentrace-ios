@@ -29,9 +29,7 @@
 			<string>STG</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>&lt;staging</string>
-				<string>url</string>
-				<string>scheme&gt;</string>
+				<string>REVERSED_CLIENT_ID</string>
 			</array>
 		</dict>
 		<dict>
@@ -41,9 +39,7 @@
 			<string>PROD</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>&lt;production</string>
-				<string>url</string>
-				<string>scheme&gt;</string>
+				<string>REVERSED_CLIENT_ID</string>
 			</array>
 		</dict>
 		<dict>
@@ -69,6 +65,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>27</string>
+	<key>CLOUDFUNCTIONS_REGION</key>
+	<string>$(CLOUDFUNCTIONS_REGION)</string>
 	<key>FIREBASE_STORAGE_URL</key>
 	<string>$(FIREBASE_STORAGE_URL)</string>
 	<key>GitBranchInfo</key>
@@ -126,7 +124,5 @@
 	<string>Light</string>
 	<key>V2_CHARACTERISTIC_ID</key>
 	<string>$(V2_CHARACTERISTIC_ID)</string>
-	<key>CLOUDFUNCTIONS_REGION</key>
-	<string>$(CLOUDFUNCTIONS_REGION)</string>
 </dict>
 </plist>

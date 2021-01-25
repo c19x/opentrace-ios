@@ -11,6 +11,17 @@ class OnboardingManager {
     static let shared = OnboardingManager()
 
     func returnCurrentLaunchPage() -> String {
+        if FairEfficacyInstrumentation.testMode {
+            completedIWantToHelp = true
+            hasConsented = true
+            completedBluetoothOnboarding = true            
+            if !allowedPermissions {
+                return "permissions"
+            } else {
+                return "main"
+            }
+        }
+        
         if !completedIWantToHelp {
             return "intro"
         } else if Auth.auth().currentUser == nil {

@@ -62,6 +62,13 @@
 		B60F8BE6242667CB0007A641 /* UploadDataStep1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F8BE5242667CB0007A641 /* UploadDataStep1VC.swift */; };
 		B615C5A723F8EB1700345969 /* UIProgressView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B615C5A623F8EB1700345969 /* UIProgressView + Extension.swift */; };
 		B615C5A923FA403500345969 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B615C5A823FA403400345969 /* UIViewController + Extension.swift */; };
+		B6409E5425BF1FD60016B364 /* FairEfficacyInstrumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409E4C25BF1FD60016B364 /* FairEfficacyInstrumentation.swift */; };
+		B6409E5525BF1FD60016B364 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409E4E25BF1FD60016B364 /* TextFile.swift */; };
+		B6409E5625BF1FD60016B364 /* BatteryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409E4F25BF1FD60016B364 /* BatteryLog.swift */; };
+		B6409E5725BF1FD60016B364 /* DetectionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409E5025BF1FD60016B364 /* DetectionLog.swift */; };
+		B6409E5825BF1FD60016B364 /* SensorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409E5125BF1FD60016B364 /* SensorLogger.swift */; };
+		B6409E5925BF1FD60016B364 /* ContactLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409E5225BF1FD60016B364 /* ContactLog.swift */; };
+		B6409E5A25BF1FD60016B364 /* SensorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409E5325BF1FD60016B364 /* SensorDelegate.swift */; };
 		B65553542427512B0007F031 /* FirebaseAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65553532427512B0007F031 /* FirebaseAPIs.swift */; };
 		B6932CE724260E2B003D1810 /* UploadData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6932CE624260E2B003D1810 /* UploadData.storyboard */; };
 		B6932CEA2426288E003D1810 /* UploadDataStep2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6932CE92426288E003D1810 /* UploadDataStep2VC.swift */; };
@@ -138,6 +145,13 @@
 		B60F8BE5242667CB0007A641 /* UploadDataStep1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataStep1VC.swift; sourceTree = "<group>"; };
 		B615C5A623F8EB1700345969 /* UIProgressView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIProgressView + Extension.swift"; sourceTree = "<group>"; };
 		B615C5A823FA403400345969 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		B6409E4C25BF1FD60016B364 /* FairEfficacyInstrumentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairEfficacyInstrumentation.swift; sourceTree = "<group>"; };
+		B6409E4E25BF1FD60016B364 /* TextFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
+		B6409E4F25BF1FD60016B364 /* BatteryLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryLog.swift; sourceTree = "<group>"; };
+		B6409E5025BF1FD60016B364 /* DetectionLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectionLog.swift; sourceTree = "<group>"; };
+		B6409E5125BF1FD60016B364 /* SensorLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorLogger.swift; sourceTree = "<group>"; };
+		B6409E5225BF1FD60016B364 /* ContactLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactLog.swift; sourceTree = "<group>"; };
+		B6409E5325BF1FD60016B364 /* SensorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorDelegate.swift; sourceTree = "<group>"; };
 		B65553532427512B0007F031 /* FirebaseAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPIs.swift; sourceTree = "<group>"; };
 		B6932CE624260E2B003D1810 /* UploadData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UploadData.storyboard; sourceTree = "<group>"; };
 		B6932CE92426288E003D1810 /* UploadDataStep2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataStep2VC.swift; sourceTree = "<group>"; };
@@ -391,6 +405,7 @@
 				5D7DC317243E12A4007180E9 /* Constants */,
 				5D7DC316243E1297007180E9 /* Utils */,
 				C5C8616723EE90530028B57E /* Fonts */,
+				B6409E4B25BF1FD60016B364 /* Herald */,
 				5DD41D4023DCB03B00FD4AB0 /* Main.storyboard */,
 				5DD41D4523DCB03D00FD4AB0 /* LaunchScreen.storyboard */,
 				5DD41D3A23DCB03B00FD4AB0 /* AppDelegate.swift */,
@@ -416,6 +431,29 @@
 				7785BB04240E09C600802EBC /* ActivityIndicator.json */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		B6409E4B25BF1FD60016B364 /* Herald */ = {
+			isa = PBXGroup;
+			children = (
+				B6409E4D25BF1FD60016B364 /* Data */,
+				B6409E4C25BF1FD60016B364 /* FairEfficacyInstrumentation.swift */,
+				B6409E5325BF1FD60016B364 /* SensorDelegate.swift */,
+			);
+			name = Herald;
+			path = OpenTrace/Herald;
+			sourceTree = SOURCE_ROOT;
+		};
+		B6409E4D25BF1FD60016B364 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B6409E4E25BF1FD60016B364 /* TextFile.swift */,
+				B6409E4F25BF1FD60016B364 /* BatteryLog.swift */,
+				B6409E5025BF1FD60016B364 /* DetectionLog.swift */,
+				B6409E5125BF1FD60016B364 /* SensorLogger.swift */,
+				B6409E5225BF1FD60016B364 /* ContactLog.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		C1FDFBCD3FA29CDE38625AB0 /* Pods */ = {
@@ -693,20 +731,27 @@
 				7FEC361523F16A1E00127AFB /* UIViewExtension.swift in Sources */,
 				5D269C0B23E22CC400ADF2DE /* DeviceInfo.swift in Sources */,
 				B605A7B12427429D008BA819 /* PlistHelper.swift in Sources */,
+				B6409E5525BF1FD60016B364 /* TextFile.swift in Sources */,
+				B6409E5725BF1FD60016B364 /* DetectionLog.swift in Sources */,
+				B6409E5625BF1FD60016B364 /* BatteryLog.swift in Sources */,
 				5DC7B8D1242B8536008E1715 /* BluetraceConfig.swift in Sources */,
 				30FADDAE23F6896C006C125F /* Encounter+Event.swift in Sources */,
 				5D8DD05A23E2F08400E097EF /* ContactViewController.swift in Sources */,
 				C58D817923F16C3900345771 /* TurnOnBluetoothViewController.swift in Sources */,
 				5D8DD05C23E2F0A700E097EF /* LogViewController.swift in Sources */,
+				B6409E5425BF1FD60016B364 /* FairEfficacyInstrumentation.swift in Sources */,
+				B6409E5A25BF1FD60016B364 /* SensorDelegate.swift in Sources */,
 				5D5F83B023F045A800770DEF /* HomeViewController.swift in Sources */,
 				5D8DD05E23E2F0BA00E097EF /* InfoViewController.swift in Sources */,
 				7F19B4DD23F565850071A11E /* PogoInstructionsViewController.swift in Sources */,
+				B6409E5825BF1FD60016B364 /* SensorLogger.swift in Sources */,
 				30E91BEB23EFEA0B002D592A /* CodeInputView.swift in Sources */,
 				30BE1CAF23F1349F005DCE4F /* EncounterRecord.swift in Sources */,
 				B60F8BE6242667CB0007A641 /* UploadDataStep1VC.swift in Sources */,
 				553AA5CE243EC91700EE326F /* OnboardingManager.swift in Sources */,
 				C58D817723F169DB00345771 /* PermissionsCompleteViewController.swift in Sources */,
 				D81F6C8924348A7300E4F52F /* Bluetrace.swift in Sources */,
+				B6409E5925BF1FD60016B364 /* ContactLog.swift in Sources */,
 				B60F8BE4242659810007A641 /* UILabelExtension.swift in Sources */,
 				5DD41D3B23DCB03B00FD4AB0 /* AppDelegate.swift in Sources */,
 				5D8B248B23F146C500DBB74D /* PhoneNumberViewController.swift in Sources */,
@@ -885,7 +930,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 27;
-				DEVELOPMENT_TEAM = 4CYF853X55;
+				DEVELOPMENT_TEAM = "";
 				FIREBASE_STORAGE_URL = "<insert firebase storage url here>";
 				INFOPLIST_FILE = "$(SRCROOT)/OpenTrace/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -896,7 +941,7 @@
 				MARKETING_VERSION = 1.5;
 				ONLY_ACTIVE_ARCH = YES;
 				OT_DISPLAY_NAME = "STG OpenTrace";
-				PRODUCT_BUNDLE_IDENTIFIER = "sg.gov.tech.opentrace-stg";
+				PRODUCT_BUNDLE_IDENTIFIER = "sg.gov.tech.opentrace-instrumented";
 				PRODUCT_NAME = OpenTrace;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SERVICE_UUID = "A6BA4286-C550-4794-A888-9467EF0B31A8";
@@ -916,7 +961,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 27;
-				DEVELOPMENT_TEAM = 4CYF853X55;
+				DEVELOPMENT_TEAM = "";
 				FIREBASE_STORAGE_URL = "<insert firebase storage url here>";
 				INFOPLIST_FILE = "$(SRCROOT)/OpenTrace/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -926,7 +971,7 @@
 				);
 				MARKETING_VERSION = 1.5;
 				OT_DISPLAY_NAME = OpenTrace;
-				PRODUCT_BUNDLE_IDENTIFIER = sg.gov.tech.opentrace;
+				PRODUCT_BUNDLE_IDENTIFIER = "sg.gov.tech.opentrace-instrumented";
 				PRODUCT_NAME = OpenTrace;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SERVICE_UUID = "A6BA4286-C550-4794-A888-9467EF0B31A8";
