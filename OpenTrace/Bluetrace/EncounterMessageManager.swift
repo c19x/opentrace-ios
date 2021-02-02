@@ -93,8 +93,8 @@ class EncounterMessageManager {
     }
 
     func fetchTempIdFromFirebase(onComplete: ((Error?, (String, Date)?) -> Void)?) {
-        if FairEfficacyInstrumentation.testMode {
-            onComplete?(nil, (FairEfficacyInstrumentation.shared.payloadData.base64EncodedString(), Date.distantFuture))
+        if BluetraceManager.testMode {
+            onComplete?(nil, (BluetraceManager.testPayloadData().base64EncodedString(), Date.distantFuture))
             return
         }
         Logger.DLog("Fetching tempId from firebase")
@@ -130,11 +130,11 @@ class EncounterMessageManager {
     }
 
     func fetchBatchTempIdsFromFirebase(onComplete: ((Error?, ([[String: Any]], Date)?) -> Void)?) {
-        if FairEfficacyInstrumentation.testMode {
+        if BluetraceManager.testMode {
             var tempIds: [[String: Any]] = []
             var tempId: [String: Any] = [:]
             tempId["expiryTime"] = Date.distantFuture
-            tempId["tempID"] = FairEfficacyInstrumentation.shared.payloadData.base64EncodedString()
+            tempId["tempID"] = BluetraceManager.testPayloadData().base64EncodedString()
             tempIds.append(tempId)
             onComplete?(nil, (tempIds, Date.distantFuture))
             return

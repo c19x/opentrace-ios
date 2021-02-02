@@ -12,6 +12,9 @@ pod 'FirebaseUI/Phone', '~> 8.0'
 pod 'lottie-ios'
 pod 'SwiftLint'
 
+# Migration to Herald
+pod 'Herald', '1.2.0-beta3'
+
 # https://firebase.google.com/docs/ios/setup#available-pods
 
 target 'OpenTrace' do
@@ -19,5 +22,4 @@ target 'OpenTrace' do
   use_frameworks!
 
   # Pods for tracer
-
 end

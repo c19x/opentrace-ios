@@ -11,7 +11,7 @@ class OnboardingManager {
     static let shared = OnboardingManager()
 
     func returnCurrentLaunchPage() -> String {
-        if FairEfficacyInstrumentation.testMode {
+        if BluetraceManager.testMode {
             completedIWantToHelp = true
             hasConsented = true
             completedBluetoothOnboarding = true            
