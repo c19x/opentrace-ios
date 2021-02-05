@@ -93,10 +93,12 @@ class EncounterMessageManager {
     }
 
     func fetchTempIdFromFirebase(onComplete: ((Error?, (String, Date)?) -> Void)?) {
-        if BluetraceManager.testMode {
-            onComplete?(nil, (BluetraceManager.testPayloadData().base64EncodedString(), Date.distantFuture))
+        // Herald test mode uses fixed tempId for instrumented tests
+        guard !HeraldIntegration.testMode else {
+            HeraldIntegration.encounterMessageManager_fetchTempIdFromFirebase(onComplete: onComplete)
             return
         }
+        // OpenTrace
         Logger.DLog("Fetching tempId from firebase")
         functions.httpsCallable("getBroadcastMessage").call { (result, error) in
             // Handle error
@@ -130,15 +132,12 @@ class EncounterMessageManager {
     }
 
     func fetchBatchTempIdsFromFirebase(onComplete: ((Error?, ([[String: Any]], Date)?) -> Void)?) {
-        if BluetraceManager.testMode {
-            var tempIds: [[String: Any]] = []
-            var tempId: [String: Any] = [:]
-            tempId["expiryTime"] = Date.distantFuture
-            tempId["tempID"] = BluetraceManager.testPayloadData().base64EncodedString()
-            tempIds.append(tempId)
-            onComplete?(nil, (tempIds, Date.distantFuture))
+        // Herald test mode uses fixed tempId for instrumented tests
+        guard !HeraldIntegration.testMode else {
+            HeraldIntegration.encounterMessageManager_fetchBatchTempIdsFromFirebase(onComplete: onComplete)
             return
         }
+        // OpenTrace
         Logger.DLog("Fetching Batch of tempIds from firebase")
         functions.httpsCallable("getTempIDs").call { (result, error) in
             // Handle error

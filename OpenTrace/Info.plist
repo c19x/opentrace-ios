@@ -80,9 +80,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Grant OpenTrace permissions to access your camera if you would like to upload a photo as part of a support request</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Uses location permission</string>
+	<string>Grant OpenTrace location permission for best performance, your location is not recorded nor shared</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>User location permission</string>
+	<string>Grant OpenTrace location permission for best performance, your location is not recorded nor shared</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Grant OpenTrace permissions to access your photo library if you would like to upload a photo as part of a support request</string>
 	<key>TRACER_SVC_ID</key>

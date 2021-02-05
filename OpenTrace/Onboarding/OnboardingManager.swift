@@ -11,17 +11,12 @@ class OnboardingManager {
     static let shared = OnboardingManager()
 
     func returnCurrentLaunchPage() -> String {
-        if BluetraceManager.testMode {
-            completedIWantToHelp = true
-            hasConsented = true
-            completedBluetoothOnboarding = true            
-            if !allowedPermissions {
-                return "permissions"
-            } else {
-                return "main"
-            }
+        // Herald test mode bypasses onboarding and authentication
+        // to enable full offline operation for instrumented tests
+        guard !HeraldIntegration.testMode else {
+            return HeraldIntegration.onboardingManager_returnCurrentLaunchPage()
         }
-        
+        // OpenTrace
         if !completedIWantToHelp {
             return "intro"
         } else if Auth.auth().currentUser == nil {
