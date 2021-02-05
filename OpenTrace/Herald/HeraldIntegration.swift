@@ -14,16 +14,16 @@ class HeraldIntegration: SensorDelegate {
     /// Enable test mode for evaluation with fair efficacy formula
     public static var testMode = true
 
-    init(_ bluetraceManager: BluetraceManager, interopOpenTraceEnabled: Bool = false) {
-        // Enables callback to bluetraceManager.bluetoothDidUpdateStateCallback
+    init(_ bluetraceManager: BluetraceManager) {
+        // Enable callback to bluetraceManager.bluetoothDidUpdateStateCallback
         // on sensor:didUpdateState events
         self.bluetraceManager = bluetraceManager
         if HeraldIntegration.testMode {
             logger.info("test mode enabled")
         }
-        // Configure interoperability with devices running legacy OpenTrace only protocol
-        if interopOpenTraceEnabled {
-            BLESensorConfiguration.interopOpenTraceEnabled = true
+        // Enable interoperability with devices running legacy OpenTrace only protocol
+        BLESensorConfiguration.interopOpenTraceEnabled = true
+        if BLESensorConfiguration.interopOpenTraceEnabled {
             BLESensorConfiguration.interopOpenTraceServiceUUID = BluetraceConfig.BluetoothServiceID
             BLESensorConfiguration.interopOpenTracePayloadCharacteristicUUID = BluetraceConfig.CharacteristicServiceIDv2
             logger.info("interop enabled (protocol=OpenTrace,serviceUUID=\(BLESensorConfiguration.interopOpenTraceServiceUUID),characteristicUUID=\(BLESensorConfiguration.interopOpenTracePayloadCharacteristicUUID))")

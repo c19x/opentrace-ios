@@ -13,7 +13,7 @@ class BluetraceManager {
     private var heraldIntegration: HeraldIntegration!
 
     private init() {
-        heraldIntegration = HeraldIntegration(self, interopOpenTraceEnabled: false)
+        heraldIntegration = HeraldIntegration(self)
     }
 
     func initialConfiguration() {
