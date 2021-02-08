@@ -22,7 +22,7 @@ class HeraldIntegration: SensorDelegate {
             logger.info("test mode enabled")
         }
         // Enable interoperability with devices running legacy OpenTrace only protocol
-        BLESensorConfiguration.interopOpenTraceEnabled = true
+        BLESensorConfiguration.interopOpenTraceEnabled = false
         if BLESensorConfiguration.interopOpenTraceEnabled {
             BLESensorConfiguration.interopOpenTraceServiceUUID = BluetraceConfig.BluetoothServiceID
             BLESensorConfiguration.interopOpenTracePayloadCharacteristicUUID = BluetraceConfig.CharacteristicServiceIDv2
