@@ -90,8 +90,15 @@ class HeraldTestInstrumentation: SensorDelegate {
     }
 
     func sensor(_ sensor: SensorType, didShare: [PayloadData], fromTarget: TargetIdentifier) {
-        logger.debug("\(sensor.rawValue),didShare=\(didShare.description),fromTarget=\(fromTarget.description)")
-        delegates.forEach({ $0.sensor(sensor, didShare: didShare, fromTarget: fromTarget) })
+        let didSharePayloadData: [PayloadData] = didShare.map({
+            if let payloadData = parsePayloadData($0) {
+                return payloadData
+            } else {
+                return $0
+            }
+        })
+        logger.debug("\(sensor.rawValue),didShare=\(didSharePayloadData.description),fromTarget=\(fromTarget.description)")
+        delegates.forEach({ $0.sensor(sensor, didShare: didSharePayloadData, fromTarget: fromTarget) })
     }
 
     func sensor(_ sensor: SensorType, didVisit: Location?) {
